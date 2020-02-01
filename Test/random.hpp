@@ -69,13 +69,13 @@ public:
 	void normal(Bayesian_filter_matrix::Vec& v, const Float mean, const Float sigma)
 	{
 		boost::normal_distribution<Float> dist(mean, sigma);
-		simple_generator_01<URng, boost::normal_distribution<Float> > gen(rng, dist);
+		simple_generator<URng, boost::normal_distribution<Float> > gen(rng, dist);
 		for (std::size_t i = 0, iend=v.size(); i < iend; ++i)
 			v[i] = gen();
 	}
 	void normal(Bayesian_filter_matrix::Vec& v)
 	{
-		simple_generator_01<URng, boost::normal_distribution<Float> > gen(rng, dist_normal_01);
+		simple_generator<URng, boost::normal_distribution<Float> > gen(rng, dist_normal_01);
 		for (std::size_t i = 0, iend=v.size(); i < iend; ++i)
 			v[i] = gen();
 	}
