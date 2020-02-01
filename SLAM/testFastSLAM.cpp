@@ -327,7 +327,7 @@ int main (int argc, char* argv[])
     	try {
 			nParticles = boost::lexical_cast<unsigned>(argv[1]);
 		}
-		catch (boost::bad_lexical_cast) {
+		catch (const boost::bad_lexical_cast&) {
 			// ignore error and use default
 		}
 	}
