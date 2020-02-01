@@ -1,3 +1,7 @@
+2020-01 Boost_1_72_0   1,000,000 particles
+Intel(R) Xeon(R) CPU E3-1505M v6 @ 3.00GHz
+gcc- 9.2.1 (x64)	0:01.702
+
 2014-05 Boost_1_55_0   1,000,000 particles
 Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz
 gcc-4.8.2 (x64)	0:02.06
