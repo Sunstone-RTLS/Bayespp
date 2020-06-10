@@ -58,7 +58,7 @@ class Iterated_terminator : public Bayes_base
  */
 {
 public:
-	virtual bool term_or_relinearize (const Iterated_covariance_scheme& f)
+	virtual bool term_or_relinearize (const Iterated_covariance_scheme& /*f*/)
 	{
 		return true;
 	}

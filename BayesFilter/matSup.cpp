@@ -15,7 +15,7 @@
 #include "matSup.hpp"
 #include <cassert>
 #ifndef NDEBUG
-#include "boost/numeric/ublas/io.hpp"
+#include <boost/numeric/ublas/io.hpp>
 #endif
 
 namespace {
@@ -26,7 +26,7 @@ inline scalar sqr(scalar x)
 {
 	return x*x;
 }
-};//namespace
+}//namespace
 
 
 /* Filter Matrix Namespace */

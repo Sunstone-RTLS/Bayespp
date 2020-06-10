@@ -48,7 +48,7 @@ public:
 	Float observe_innovation (Linrz_uncorrelated_observe_model& h, const FM::Vec& s);
 	Float observe_innovation (Linrz_correlated_observe_model& h, const FM::Vec& s);
 
-	virtual Float Omega(const FM::SymMatrix& Ai, const FM::SymMatrix& Bi, const FM::SymMatrix& A)
+	virtual Float Omega(const FM::SymMatrix& /*Ai*/, const FM::SymMatrix& /*Bi*/, const FM::SymMatrix& /*A*/)
 	// Determine norm Omega 0..1 for the CI combination
 	// Default norm is the fixed value 0.5
 	{

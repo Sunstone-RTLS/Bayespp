@@ -22,7 +22,7 @@ inline scalar sqr(scalar x)
 {
 	return x*x;
 }
-};//namespace
+}//namespace
 
 
 /* Filter namespace */
@@ -67,7 +67,7 @@ Simple_linrz_correlated_observe_model::Simple_linrz_correlated_observe_model (St
 {
 	Hx = Hx_init;
 	Z = Z_init;
-};
+}
 
 Simple_linrz_uncorrelated_observe_model::Simple_linrz_uncorrelated_observe_model (State_function f_init, const FM::Matrix& Hx_init, const FM::Vec& Zv_init) :
 	Linrz_uncorrelated_observe_model (Hx_init.size2(), Hx_init.size1()),
@@ -79,7 +79,7 @@ Simple_linrz_uncorrelated_observe_model::Simple_linrz_uncorrelated_observe_model
 {
 	Hx = Hx_init;
 	Zv = Zv_init;
-};
+}
 
 Simple_linear_correlated_observe_model::Simple_linear_correlated_observe_model (const FM::Matrix& Hx_init, const FM::SymMatrix& Z_init) :
 	Linear_correlated_observe_model (Hx_init.size2(), Hx_init.size1())
@@ -90,7 +90,7 @@ Simple_linear_correlated_observe_model::Simple_linear_correlated_observe_model (
 {
 	Hx = Hx_init;
 	Z = Z_init;
-};
+}
 
 Simple_linear_uncorrelated_observe_model::Simple_linear_uncorrelated_observe_model (const FM::Matrix& Hx_init, const FM::Vec& Zv_init) :
 	Linear_uncorrelated_observe_model (Hx_init.size2(), Hx_init.size1())
@@ -101,7 +101,7 @@ Simple_linear_uncorrelated_observe_model::Simple_linear_uncorrelated_observe_mod
 {
 	Hx = Hx_init;
 	Zv = Zv_init;
-};
+}
 
 
 
