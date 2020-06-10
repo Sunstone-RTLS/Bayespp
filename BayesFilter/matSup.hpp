@@ -28,7 +28,7 @@ namespace Bayesian_filter_matrix
 #ifndef NDEBUG
 void assert_isPSD (const SymMatrix &M);
 #else
-inline void assert_isPSD (const SymMatrix &M) {}
+inline void assert_isPSD (const SymMatrix &/*M*/) {}
 #endif
 
 /*
