@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 set(BayesFilterHeaders
 	allFilters.hpp
+	bayesException.hpp
 	bayesFlt.hpp
 	CIFlt.hpp
 	# compatibility.hpp
