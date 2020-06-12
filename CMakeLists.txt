@@ -12,12 +12,23 @@ include_directories(${Boost_INCLUDE_DIRS})
 
 add_subdirectory(BayesFilter)
 
+include(CMakePackageConfigHelpers)
+configure_package_config_file(${PROJECT_NAME}Config.cmake.in
+	${CMAKE_CURRENT_BINARY_DIR}/gen/${PROJECT_NAME}Config.cmake
+	INSTALL_DESTINATION lib/cmake/${PROJECT_NAME}
+)
 
-install(EXPORT Bayespp
-  FILE
-    BayesppTargets.cmake
-  NAMESPACE
-    Bayespp::
-  DESTINATION
-    ${CMAKE_INSTALL_LIBDIR}/cmake/Bayespp
+write_basic_package_version_file(
+        ${CMAKE_CURRENT_BINARY_DIR}/gen/${PROJECT_NAME}ConfigVersion.cmake
+        VERSION "${PROJECT_VERSION}"
+        COMPATIBILITY ExactVersion
+)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/gen/${PROJECT_NAME}ConfigVersion.cmake
+	${CMAKE_CURRENT_BINARY_DIR}/gen/${PROJECT_NAME}Config.cmake
+        DESTINATION lib/cmake/${PROJECT_NAME} )
+
+
+install(EXPORT ${PROJECT_NAME}Targets
+	NAMESPACE Bayespp::
+	DESTINATION lib/cmake/${PROJECT_NAME}
 )

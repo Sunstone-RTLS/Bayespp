@@ -47,7 +47,7 @@ target_compile_options(BayesFilter PRIVATE -D_GLIBCXX_USE_CXX11_ABI=1 -Wall -Wer
 include(GNUInstallDirs)
 
 install(TARGETS BayesFilter
-	EXPORT Bayespp
+	EXPORT ${PROJECT_NAME}Targets
 	LIBRARY DESTINATION "lib"
 	ARCHIVE DESTINATION "lib"
 	INCLUDES DESTINATION "include"
