@@ -5,7 +5,6 @@ project(Bayespp VERSION 2020.5)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wdeprecated-copy -Wno-error=deprecated-copy")
 
 set(Boost_USE_STATIC_LIBS ON) 
 find_package(Boost REQUIRED)
